@@ -6,7 +6,7 @@ Euros OS Home Assistant Custom Integration
 File        : const.py
 Author      : Patryk "KoPcIu" Kopeć / https://github.com/McKoPcIu/EurosOS
 Integration : euros_os
-Version     : 0.1.1-hotfix
+Version     : 0.1.2
 Description : Custom integration for EurosEnergy and E-On devices.
 
 ===============================================================================
@@ -59,7 +59,11 @@ SENSORS_VARIABLES = { # Name, Unit, Icon, Device class
     "ZM_AC_IN_VOL": ("Napięcie wejściowe", "V", "mdi:flash", "voltage"),
     "ZM_AC_IN_CUR": ("Prąd wejściowy", "A", "mdi:current-ac", "current"),
     "ZM_AC_IN_PWR": ("Aktualny pobór mocy", "W", "mdi:power", "power"),
-    "ZM_AC_IN_ENERGY": ("Energia całkowita", "kWh", "mdi:counter", "energy")
+    "ZM_AC_IN_ENERGY": ("Energia całkowita", "kWh", "mdi:counter", "energy"),
+
+    # Pressure
+    "ADC_1": ("Ciśnienie CO", "bar", "mdi:gauge", "pressure"),
+    "ADC_2": ("Ciśnienie CWU", "bar", "mdi:gauge", "pressure")
 }
 
 NUMBERS_VARIABLES = { # Name, Unit, Icon, Min, Max, Step, Mode(0 - )
@@ -67,7 +71,10 @@ NUMBERS_VARIABLES = { # Name, Unit, Icon, Min, Max, Step, Mode(0 - )
     "CUN_D_HCU": ("Podbicie krzywej grzewczej", "°C", "mdi:thermometer", 0, 10, 1, "AUTO"),
     "SPDHW_ZAD": ("Temp. zadana CWU", "°C", "mdi:thermometer", 30, 55, 1, "BOX"),
     "SPHT_ZAD": ("Temp. zadana CO", "°C", "mdi:thermometer", 10, 30, 1, "BOX"),
-    "SPDHW_HIST": ("Histereza regulacji CWU", "°C", "mdi:thermometer", 1, 12, 1, "AUTO")
+    "SPDHW_HIST": ("Histereza regulacji CWU", "°C", "mdi:thermometer", 1, 12, 1, "AUTO"),
+
+    "ADC_1_Factor_2": ("Ciśnienie CO - Współczynnik", None, "mdi:tune-vertical", 1, 7, 0.1, "AUTO"),
+    "ADC_2_Factor_2": ("Ciśnienie CWU - Współczynnik", None, "mdi:tune-vertical", 1, 7, 0.1, "AUTO")
 }
 
 
